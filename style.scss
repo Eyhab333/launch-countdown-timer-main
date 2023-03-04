@@ -1,0 +1,182 @@
+@import "function";
+
+// RESETS
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+// /* ####### */
+
+/*##### for-phone-only ##########*/
+@media (max-width: 599px) {
+  body {
+    background: url(./images/bg-stars.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #1d1e28;
+  }
+
+  main {
+    padding: toRem(142) toRem(24) toRem(23) toRem(24);
+    h1 {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 29px;
+      text-align: center;
+      letter-spacing: 7.5px;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: toRem(24);
+    }
+
+    .counter {
+      border: 1px solid red;
+      height: 92px;
+      margin-bottom: 163px;
+
+      .item {
+        .count {
+          h2 {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 71px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: -1.08px;
+            color: #fb5e84;
+          }
+        }
+
+        p {
+          font-weight: 700;
+          font-size: 7px;
+          line-height: 9px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 2.95937px;
+          color: #8385a9;
+        }
+      }
+    }
+  }
+
+  footer {
+    padding: toRem(96) toRem(0) toRem(48) toRem(0);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      right: 0;
+      left: 0;
+      background-image: url(./images/pattern-hills.svg);
+      background-size: cover;
+      background-position-x: 469px;
+      width: 971px;
+      height: 168px;
+      z-index: -1;
+    }
+
+    .social-media {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 45%;
+      margin: 0 auto;
+      .icon {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+/*############ for-tablet-portrait-up ##############*/
+@media (min-width: 600px) {
+}
+// @media (600px <= width <= 899px) {}
+
+/*############ for-tablet-landscape-up #############*/
+@media (min-width: 900px) {
+}
+// @media (900px <= width <= 1199px) {}
+
+/*############ for-desktop-up ###########*/
+@media (min-width: 1200px) {
+}
+
+/*############ for-big-desktop-up ##########*/
+@media (min-width: 1800px) {
+}
